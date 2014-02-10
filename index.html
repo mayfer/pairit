@@ -46,7 +46,7 @@
 
         $(document).ready(function(){
 
-            var num_circles = 5;
+            var num_circles = 2;
             var circle_sizes = [];
 
             function number_different_enough(num, num_array, range) {
@@ -105,6 +105,7 @@
             });
 
             $('#ordered-circles .circle').each(function() {
+                var delay = 150;
                 $(this).droppable({
                     drop: function( event, ui ) {
                         $( this )
@@ -116,7 +117,13 @@
                         ui.draggable.animate({
                             top: '+=' + top_end,
                             left: '+=' + left_end
-                        }, 100);
+                        }, delay);
+
+                        if($('.circle.dropped').length == $('#unordered-circles .circle').length) {
+                            setTimeout(function() {
+                                window.location = "./02.html";
+                            }, delay);
+                        }
                     },
                     accept: '.size-'+$(this).data('size'),
                 });
@@ -131,12 +138,13 @@
     </head>
     <body>
         <div id='main'>
+            <h1>DRAG THE CIRCLES INTO APPROPRIATE CIRCLES</h1>
             <div class='wrapper'>
-                <div id='unordered-circles'>
-                </div>
                 <div class='separator'>
                 </div>
                 <div id='ordered-circles'>
+                </div>
+                <div id='unordered-circles'>
                 </div>
             </div>
         </div>
