@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='shortcut icon' href='#' />
+        <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1'>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link href="" sizes="144x144" rel="apple-touch-icon">
+        <link href="" rel="apple-touch-startup-image">
+        <script type='text/javascript' src='libs/jquery.min.js'></script>
+        <script type='text/javascript' src='libs/jquery-ui-1.10.4.custom.min.js'></script>
+        <script type='text/javascript' src='libs/jquery.ui.touch-punch.js'></script>
+        <style type="text/css">
+
+            html, body { margin: 0; padding: 0; background: #fff; }
+
+            .circle-container {
+                padding: 10px;
+                display: inline-block;
+                text-align: center;
+            }
+            .circle {
+                border-radius: 50%;
+                background-color: black;
+                display: inline-block;
+            border: 1px solid transparent;
+            }
+            .dashed {
+                border-radius: 50%;
+                border: 2px dotted rgba(0, 0, 0, 0.5);
+                background-color: transparent;
+            }
+            .dropped {
+                border: 2px solid transparent;
+                background: #0f0;
+            }
+
+            .separator {
+                margin: 30px;
+            }
+
+        </style>
+        <script type="text/javascript">
+
+
+        $(document).ready(function(){
+
+            var num_circles = 5;
+            var circle_sizes = [];
+
+            function number_different_enough(num, num_array, range) {
+                for(var i=0; i<num_array.length; i++) {
+                    if(Math.abs(num - num_array[i]) < range) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            for(var i = 0; i < num_circles; i++) {
+                var size;
+                do {
+                    size = parseInt(Math.random() * 80 + 50);
+                } while(!number_different_enough(size, circle_sizes, 10))
+
+                circle_sizes.push(size);
+
+                var circle_container = $('<div>').addClass('circle-container');
+                var circle = $('<div>')
+                    .addClass('circle')
+                    .addClass('size-'+size)
+                    .width(size)
+                    .height(size)
+                    .appendTo(circle_container);
+
+                $('#unordered-circles').append(circle_container);
+
+
+            }
+
+            circle_sizes = circle_sizes.sort(function(a,b) { return a - b;});
+            console.log(circle_sizes);
+            for(var i = 0; i < num_circles; i++) {
+                var size = circle_sizes[i];
+                var circle_container = $('<div>').addClass('circle-container');
+                var circle = $('<div>')
+                    .addClass('circle').addClass('dashed')
+                    .width(size)
+                    .height(size)
+                    .data('size', size)
+                    .appendTo(circle_container);
+
+                $('#ordered-circles').append(circle_container);
+            }
+
+            $('#unordered-circles .circle').draggable({
+                revert : function(event, ui) {
+                    $(this).data("uiDraggable").originalPosition = {
+                        top : 0,
+                        left : 0
+                    };
+                    return !event;
+                }
+            });
+
+            $('#ordered-circles .circle').each(function() {
+                $(this).droppable({
+                    drop: function( event, ui ) {
+                        $( this )
+                            .addClass("dropped");
+                        var drop_p = $(this).offset();
+                        var drag_p = ui.draggable.offset();
+                        var left_end = drop_p.left - drag_p.left + 1;
+                        var top_end = drop_p.top - drag_p.top + 1;
+                        ui.draggable.animate({
+                            top: '+=' + top_end,
+                            left: '+=' + left_end
+                        }, 100);
+                    },
+                    accept: '.size-'+$(this).data('size'),
+                });
+            });
+        
+
+        });
+
+        </script>
+
+        <title>Pair it</title>
+    </head>
+    <body>
+        <div id='main'>
+            <div class='wrapper'>
+                <div id='unordered-circles'>
+                </div>
+                <div class='separator'>
+                </div>
+                <div id='ordered-circles'>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
