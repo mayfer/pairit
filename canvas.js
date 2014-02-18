@@ -110,6 +110,8 @@ function drawingCanvas(jq_elem) {
             
         ctx.lineTo(current_position.x, current_position.y);
         ctx.stroke();
+
+        this.compareDrawnArea();
     }
     this.getCursorPosition = function(e) {
 
@@ -134,10 +136,37 @@ function drawingCanvas(jq_elem) {
         var measure = ctx.measureText(letter);
         console.log(measure);
         ctx.fillText(letter, ctx.width/2 - measure.width/2, ctx.height/2 + font_size/3);
+
+        var imgdata = this.getPixelData()
+        this.letterImageData = imgdata.data;
+        this.letterNumPixels = 0;
+        for(var i=3; i<this.letterImageData.length; i += 4) {
+            //this.letterImageData[i-3] = 250;
+            if(this.letterImageData[i] > 0) {
+                this.letterNumPixels++;
+            }
+        }
+        console.log(this.letterNumPixels);
+        //ctx.putImageData(imgdata, 0, 0);
     }
 
     this.getPixelData = function() {
-        return ctx.getImageData(0, 0, ctx.width, ctx.height);
+        return ctx.getImageData(0, 0, ctx.width*2, ctx.height*2);
+    }
+    this.compareDrawnArea = function() {
+        var letter = this.letterImageData;
+        var current = this.getPixelData().data;
+
+        var matches = 0;
+        for(var i=0; i<letter.length; i += 4) {
+            if(letter[i] > 0 && current[i] != letter[i]) {
+                matches++;
+            }
+        }
+        //console.log(matches);
+        if(matches >= this.letterNumPixels - 5000) {
+            console.log("DONE");
+        }
     }
 }
 
