@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='shortcut icon' href='#' />
+        <link rel="stylesheet" href="libs/animate.css">
+        <meta charset="utf-8"> 
+        <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1'>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link href="" sizes="144x144" rel="apple-touch-icon">
+        <link href="" rel="apple-touch-startup-image">
+        <script type='text/javascript' src='libs/jquery.min.js'></script>
+        <script type='text/javascript' src='libs/jquery-ui-1.10.4.custom.min.js'></script>
+        <script type='text/javascript' src='libs/jquery.ui.touch-punch.js'></script>
+          <script type='text/css' src='libs/animate.css'></script>
+        <script type='text/javascript' src='canvas.js'></script>
+        <style type="text/css">
+
+          html, body {
+          		margin: 0;
+          		padding: 0;
+          		background: #18504b;
+          		color: white; 
+            	text-align: center;
+            	position: relative;
+            	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            	}
+           .dodo {
+	           margin: 80px 10px 25px;
+	           font-size: 40px;
+	           text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+	           color: #fff;
+	           border: none;
+	           padding: 0;
+	           }
+	            
+	       h1 {
+	            text-rendering: optimizelegibility;
+		       margin:0 0 15px;
+		       font-size:33px;
+		       color:#000;
+		       font-weight: 300;
+		       padding-bottom: 10px;
+		       border-bottom: 1px solid #eee;
+		       }
+ 
+            #draw {
+                height: 300px;
+                width: 300px;
+                margin: 0 auto;
+                border: 1px solid #fff;
+                background: #000;
+            }
+           
+            #main{padding-top: 5%;
+            }
+        </style>
+        <script type="text/javascript">
+
+
+        $(document).ready(function(){
+            
+            
+            $('h1').addClass('animated bounceInDown');
+
+            var draw = new drawingCanvas($('#draw'));
+
+            var linewidth = 20;
+            draw.init('#ffffff', linewidth);
+
+            draw.drawLetter("A", "#666", "Helvetica", 200);
+            console.log(draw.getPixelData());
+
+        });
+
+        </script>
+
+        <title>Pair it</title>
+    </head>
+    <body>
+        <div id='main'>
+            <h1 class="dodo">draw the letter</h2>
+            <div class='wrapper'>
+                <div id='draw'>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
