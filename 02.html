@@ -149,7 +149,9 @@
                     $(this).html("&times;").addClass('wrong');
                 }
                 if($('.vowel.correct').length == $('.vowel').length) {
-                    window.location = './03.html'; 
+                    setTimeout(function() {
+                        window.location = './03.html'; 
+                    }, 150);
                 }
             });
             

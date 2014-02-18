@@ -164,8 +164,10 @@ function drawingCanvas(jq_elem) {
             }
         }
         //console.log(matches);
-        if(matches >= this.letterNumPixels - 5000) {
-            console.log("DONE");
+        if(matches >= this.letterNumPixels - 2000) {
+            setTimeout(function() {
+                window.location = './index.html'; 
+            }, 150);
         }
     }
 }
