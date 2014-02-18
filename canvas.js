@@ -146,7 +146,7 @@ function drawingCanvas(jq_elem) {
                 this.letterNumPixels++;
             }
         }
-        this.slack = this.letterNumPixels / 10;
+        this.slack = this.letterNumPixels / 5;
         //ctx.putImageData(imgdata, 0, 0);
     }
 
