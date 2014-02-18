@@ -146,7 +146,7 @@ function drawingCanvas(jq_elem) {
                 this.letterNumPixels++;
             }
         }
-        console.log(this.letterNumPixels);
+        this.slack = this.letterNumPixels / 20;
         //ctx.putImageData(imgdata, 0, 0);
     }
 
@@ -164,7 +164,7 @@ function drawingCanvas(jq_elem) {
             }
         }
         //console.log(matches);
-        if(matches >= this.letterNumPixels - 2000) {
+        if(matches >= this.letterNumPixels - this.slack) {
             setTimeout(function() {
                 window.location = './index.html'; 
             }, 150);
