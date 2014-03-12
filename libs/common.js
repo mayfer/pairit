@@ -10,8 +10,10 @@ function correctAnswer(message, nextUrl) {
         .html(message)
         .appendTo(correct);
 
-    setTimeout(function(){
-        window.location = nextUrl;
-    }, 800);
+    if(nextUrl !== undefined) {
+        setTimeout(function(){
+            window.location = nextUrl;
+        }, 800);
+    }
 
 }
