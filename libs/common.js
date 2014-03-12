@@ -1,8 +1,9 @@
 
-function correctAnswer(message, nextUrl) {
+function correctAnswer(message, cssclass, nextUrl) {
 
     var correct = $('<div>')
         .attr('id', 'correct')
+        .addClass(cssclass)
         .appendTo('body');
 
     var correct_inner = $('<div>')
