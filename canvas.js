@@ -166,7 +166,7 @@ function drawingCanvas(jq_elem) {
         //console.log(matches);
         if(matches >= this.letterNumPixels - this.slack) {
             setTimeout(function() {
-                window.location = './05.html'; 
+                correctAnswer("right", "05.html");
             }, 150);
         }
     }
