@@ -55,14 +55,15 @@
                 margin: 30px;
             }
 
-            .correct {
-                color: #0f0;
+             .correct {text-rendering: optimizelegibility;
+                color: #ffffff;
                 font-weight: bold;
             }
             .wrong {
-                color: #a00;
+                color: #040052;
                 font-weight: bold;
             }
+	           
 
            .dodo {
 	           margin: 80px 10px 25px;
@@ -148,7 +149,7 @@
                 }
                 if($('.vowel.correct').length == $('.vowel').length) {
                     setTimeout(function() {
-                        correctAnswer("YES you did it omg", "level03", "04.html");
+                        correctAnswer("Correct!", "level03", "04.html");
                     }, 150);
                 }
             });

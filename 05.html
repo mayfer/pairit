@@ -20,7 +20,7 @@
           html, body {
           		margin: 0;
           		padding: 0;
-          		background: #18504b;
+          		background: #41a7a8;
           		color: white; 
             	text-align: center;
             	position: relative;
@@ -31,7 +31,7 @@
                 position: relative;
             }
             .letter {
-            	background-color: #23b497;
+            	background-color: #2a8f98;
                 border: 6px solid #fff;
                 display: inline-block;
                 width: 100px;
@@ -102,7 +102,7 @@
             };
 
 
-            var words = "sucuk islam renegade crack tombstone synapse".split(" ");
+            var words = "hello bird word learn how when where bird texas bubble dandy bunny".split(" ");
             var word = words[Math.round(Math.random() * (words.length-1))];
 
             window.original_word = word;
@@ -125,7 +125,7 @@
                     setTimeout(function() {
                         var letters = $('#letters .letter').text();
                         if(letters == window.original_word) {
-                            correctAnswer("Yyup.", "level05", './index.html'); 
+                            correctAnswer("Correct!", "level05", './06.html'); 
                         }
                     }, 300);
                 }
@@ -143,9 +143,9 @@
     </head>
     <body>
         <div id='main'>
-            <h1 class="dodo" id="word"></h2>
+            <h1 class="dodo" id="word"> </h2>
             <div class='wrapper'>
-                <div id='letters'>
+                <div id='letters'>(rearrange letters)<br>
                 </div>
             </div>
         </div>
