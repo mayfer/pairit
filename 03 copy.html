@@ -14,24 +14,21 @@
         <script type='text/javascript' src='libs/jquery.min.js'></script>
         <script type='text/javascript' src='libs/jquery-ui-1.10.4.custom.min.js'></script>
         <script type='text/javascript' src='libs/jquery.ui.touch-punch.js'></script>
+          <script type='text/css' src='libs/animate.css'></script>
         <script type='text/javascript' src='libs/common.js'></script>
         <style type="text/css">
-      
           html, body {
           		margin: 0;
           		padding: 0;
-          		background: #207d45;
+          		background: #18504b;
           		color: white; 
             	text-align: center;
             	position: relative;
             	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
             	}
 
-            #letters {
-                position: relative;
-            }
             .letter {
-            	background-color: #2ec269;
+            	background-color: #23b497;
                 border: 6px solid #fff;
                 display: inline-block;
                 width: 100px;
@@ -57,14 +54,15 @@
                 margin: 30px;
             }
 
-            .correct {
-                color: #0f0;
+             .correct {text-rendering: optimizelegibility;
+                color: #ffffff;
                 font-weight: bold;
             }
             .wrong {
-                color: #a00;
+                color: #040052;
                 font-weight: bold;
             }
+	           
 
            .dodo {
 	           margin: 80px 10px 25px;
@@ -74,8 +72,6 @@
 	           border: none;
 	           padding: 0;
 	           }
-
-            .ui-sortable-placeholder {  display: inline-block; height: 100px; height: 30px; }
 	            
 	       h1 {
 	            text-rendering: optimizelegibility;
@@ -102,34 +98,62 @@
             };
 
 
-            var words = "{0}`~ __@#_ ojOj0 {0}`~ __@#_ ojOj0 {0}`~ __@#_ ojOj0".split(" ");
-            var word = words[Math.round(Math.random() * (words.length-1))];
+            var vowels_str = "a e i o u"
+            var vowels = vowels_str.split(" ");
 
-            window.original_word = word;
-            $('#word').html(word);
+            var consonants_str = "b c d f g h j k l m n p r s t v x z"
+            var consonants = consonants_str.split(" ");
+            var all_letters = vowels.concat(consonants);
 
-            window.original_word = word;
-            word = shuffle(word.split('')).join('');
+            var num_letters = 5;
+            var letters = [];
 
-            for(var i = 0; i < word.length; i++) {
-                var letter_elem = $('<div>')
-                    .addClass('letter')
-                    .html(word[i])
-                    .appendTo($('#letters'));
+            for(var i = 0; i < num_letters; i++) {
+                var letter_group;
+                if(i < 2) {
+                    letter_group = vowels;
+                } else {
+                    letter_group = all_letters;
+                }
+
+                var letter = letter_group[Math.floor(Math.random() * letter_group.length)];
+
+                letters.push(letter);
+                // remove the letter from original arrays to prevent duplicates
+                var index = all_letters.indexOf(letter); all_letters.splice(index, 1);
+                var index = vowels.indexOf(letter); vowels.splice(index, 1);
             }
 
-            $('#letters').sortable({
-            });
-            $('#letters').droppable({
-                drop: function(ev, ui){
+            shuffle(letters);
+
+            for(var i = 0; i < letters.length; i++) {
+                var letter_elem = $('<div>')
+                    .addClass('letter')
+                    .html(letters[i])
+                    .appendTo($('#letters'));
+
+                if(vowels_str.indexOf(letters[i]) != -1) {
+                    letter_elem.addClass('vowel');
+                }
+
+            }
+        
+            $('#letters .letter').one('click touchend', function(e) {
+                e.preventDefault();
+                console.log(vowels_str.indexOf($(this).html()))
+                if($(this).hasClass('vowel')) {
+                    $(this).html("✓").addClass('correct');
+                } else {
+                    $(this).html("&times;").addClass('wrong');
+                }
+                if($('.vowel.correct').length == $('.vowel').length) {
                     setTimeout(function() {
-                        var letters = $('#letters .letter').text();
-                        if(letters == window.original_word) {
-                            correctAnswer("Correct!", "level06", './03 copy.html'); 
-                        }
-                    }, 100);
+                        correctAnswer("Correct!", "level03", "index.html");
+                    }, 150);
                 }
             });
+            
+            
             
             $('h1').addClass('animated bounceInDown ');
             
@@ -142,13 +166,15 @@
         <title>Pair it</title>
     </head>
     <body>
-        <div id='main'>  
-            <h1 class="dodo" id="word"></h1>
-            <div class='wrapper'>  (rearrange symbols) <br>
+        <div id='main'>
+            <h1 class="dodo">tap the vowels</h2>
+            <div class='wrapper'>
                 <div id='letters'>
-              
                 </div>
             </div>
         </div>
     </body>
 </html>
+
+
+

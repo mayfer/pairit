@@ -11,27 +11,29 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link href="" sizes="144x144" rel="apple-touch-icon">
         <link href="" rel="apple-touch-startup-image">
+        <link href='http://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
+
         <script type='text/javascript' src='libs/jquery.min.js'></script>
         <script type='text/javascript' src='libs/jquery-ui-1.10.4.custom.min.js'></script>
         <script type='text/javascript' src='libs/jquery.ui.touch-punch.js'></script>
         <script type='text/javascript' src='libs/common.js'></script>
         <style type="text/css">
-      
           html, body {
           		margin: 0;
           		padding: 0;
-          		background: #207d45;
+          		background: #41a7a8;
           		color: white; 
             	text-align: center;
             	position: relative;
-            	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            	font-family: 'Playfair Display', !important;
             	}
 
             #letters {
                 position: relative;
+                
             }
             .letter {
-            	background-color: #2ec269;
+            	background-color: #2a8f98;
                 border: 6px solid #fff;
                 display: inline-block;
                 width: 100px;
@@ -40,8 +42,11 @@
                 line-height: 100px;
                 font-size: 50px;
                 margin: 15px;
-                
+              
              
+            }
+            #that{
+	            font-size:25px;
             }
             .dashed {
                 border-radius: 50%;
@@ -93,8 +98,7 @@
         </style>
         <script type="text/javascript">
 
-
-        $(document).ready(function(){
+ $(document).ready(function(){
 
             function shuffle(o){ //v1.0
                 for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -102,7 +106,7 @@
             };
 
 
-            var words = "{0}`~ __@#_ ojOj0 {0}`~ __@#_ ojOj0 {0}`~ __@#_ ojOj0".split(" ");
+            var words = "sucuk islam renegade crack tombstone synapse".split(" ");
             var word = words[Math.round(Math.random() * (words.length-1))];
 
             window.original_word = word;
@@ -125,9 +129,9 @@
                     setTimeout(function() {
                         var letters = $('#letters .letter').text();
                         if(letters == window.original_word) {
-                            correctAnswer("Correct!", "level06", './03 copy.html'); 
+                            correctAnswer("Yyup.", "level05", './index.html'); 
                         }
-                    }, 100);
+                    }, 300);
                 }
             });
             
@@ -142,13 +146,16 @@
         <title>Pair it</title>
     </head>
     <body>
-        <div id='main'>  
-            <h1 class="dodo" id="word"></h1>
-            <div class='wrapper'>  (rearrange symbols) <br>
-                <div id='letters'>
-              
+        <div id='main'>
+            <h1 class="dodo" id="word"> </h2>
+            <div class='wrapper'>
+                <div id='letters'><div id="that">(rearrange letters)</div><br>
                 </div>
             </div>
         </div>
     </body>
 </html>
+
+
+
+

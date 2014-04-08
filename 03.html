@@ -99,10 +99,10 @@
             };
 
 
-            var vowels_str = "a e i o u A E I O U"
+            var vowels_str = "a e i o u"
             var vowels = vowels_str.split(" ");
 
-            var consonants_str = "b c d f g h j k l m n p r s t v x z B C D F G H J K L M N P R S T V X Z"
+            var consonants_str = "b c d f g h j k l m n p r s t v x z"
             var consonants = consonants_str.split(" ");
             var all_letters = vowels.concat(consonants);
 
@@ -149,7 +149,7 @@
                 }
                 if($('.vowel.correct').length == $('.vowel').length) {
                     setTimeout(function() {
-                        correctAnswer("Correct!", "level03", "04.html");
+                        correctAnswer("Correct!", "level03", "index copy.html");
                     }, 150);
                 }
             });

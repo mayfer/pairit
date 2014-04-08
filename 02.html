@@ -18,7 +18,7 @@
         <script type='text/javascript' src='libs/common.js'></script>
         <style type="text/css">
 
-        
+    
 	        html, body {
           		margin: 0;
           		padding: 0;
@@ -26,8 +26,7 @@
           		color: white; 
             	text-align: center;
             	position: relative;
-            	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-            	        
+            	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif
             	}
             .letter { 
             	border-radius: 40px;
@@ -40,7 +39,7 @@
                 line-height: 150px;
                 font-size: 50px;
                 margin: 15px;
-             
+            
             }
             .dashed {
                 border-radius: 50%;
@@ -81,14 +80,19 @@
 	            
 	       h1 {
 	    
-		       margin:0 0 15px;
+		       margin:0px;
 		       font-size:33px;
 		       color:#000;
 		       font-weight: 300;
 		       padding-bottom: 10px;
 		       border-bottom: 1px solid #eee;
 		       }
-            
+           h2{margin:0px}
+           
+           h3 {font-size:90px;
+	           margin:0px;
+	           padding-bottom: -70px;
+           } 
         </style>
         <script type="text/javascript">
 
@@ -101,10 +105,10 @@
             };
 
 
-            var vowels_str = "b c m g"
+            var vowels_str = "&"
             var vowels = vowels_str.split(" ");
 
-            var consonants_str = "a e i o u"
+            var consonants_str = "% ? @"
             var consonants = consonants_str.split(" ");
             var all_letters = vowels.concat(consonants);
 
@@ -113,7 +117,7 @@
 
             for(var i = 0; i < num_letters; i++) {
                 var letter_group;
-                if(i < 2) {
+                if(i < -4) {
                     letter_group = vowels;
                 } else {
                     letter_group = all_letters;
@@ -151,7 +155,7 @@
                 }
                 if($('.vowel.correct').length == $('.vowel').length) {
                     setTimeout(function() {
-                        correctAnswer("Correct!", "level02", "./03.html");
+                        correctAnswer("Correct!", "level02", "./05 copy.html");
                     }, 150);
                 }
             });
@@ -170,7 +174,7 @@
     </head>
     <body>
         <div id='main'>
-            <h1 class="dodo">tap the consonants</h2>
+            <h1 class="dodo">tap the symbol </h2> <br> <h3>&</h3>
             <div class='wrapper'>
                 <div id='letters'>
                 </div>

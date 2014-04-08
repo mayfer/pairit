@@ -20,7 +20,7 @@
           html, body {
           		margin: 0;
           		padding: 0;
-          		background: #207d45;
+          		background: #41a7a8;
           		color: white; 
             	text-align: center;
             	position: relative;
@@ -31,7 +31,7 @@
                 position: relative;
             }
             .letter {
-            	background-color: #2ec269;
+            	background-color: #2a8f98;
                 border: 6px solid #fff;
                 display: inline-block;
                 width: 100px;
@@ -102,7 +102,7 @@
             };
 
 
-            var words = "{0}`~ __@#_ ojOj0 {0}`~ __@#_ ojOj0 {0}`~ __@#_ ojOj0".split(" ");
+            var words = "theme stare labor abate there".split(" ");
             var word = words[Math.round(Math.random() * (words.length-1))];
 
             window.original_word = word;
@@ -125,7 +125,7 @@
                     setTimeout(function() {
                         var letters = $('#letters .letter').text();
                         if(letters == window.original_word) {
-                            correctAnswer("Correct!", "level06", './03 copy.html'); 
+                            correctAnswer("Correct!", "level05", './03.html'); 
                         }
                     }, 100);
                 }
