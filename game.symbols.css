@@ -1,0 +1,23 @@
+
+#symbols .letter { 
+    border-radius: 40px;
+    background-color: #009ed7;
+    border: 6px solid #fff;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 50px;
+    margin: 15px;
+
+}
+#symbols .dashed {
+    border-radius: 50%;
+    border: 2px dotted rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+}
+#symbols .dropped {
+    border: 2px solid transparent;
+    background: #0f0;
+}

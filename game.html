@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <link rel='shortcut icon' href='#' />
+        <link rel="stylesheet" href="libs/style.css">
+        <link rel="stylesheet" href="libs/animate.css">
+        <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1'>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link href="" sizes="144x144" rel="apple-touch-icon">
+        <link href="" rel="apple-touch-startup-image">
+        <script type='text/javascript' src='libs/jquery.min.js'></script>
+        <script type='text/javascript' src='libs/jquery-ui-1.10.4.custom.min.js'></script>
+        <script type='text/javascript' src='libs/jquery.ui.touch-punch.js'></script>
+        <script type='text/javascript' src='libs/common.js'></script>
+
+        <script type='text/javascript' src='game.circles.js'></script>
+        <script type='text/javascript' src='game.symbols.js'></script>
+        <script type='text/javascript' src='game.words.js'></script>
+        <script type='text/javascript' src='game.js'></script>
+
+         <link rel="stylesheet" href="game.css">
+         <link rel="stylesheet" href="game.circles.css">
+         <link rel="stylesheet" href="game.symbols.css">
+         <link rel="stylesheet" href="game.words.css">
+        
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                window.games = startGame();
+                window.games.start();
+
+            });
+
+        </script>
+        
+
+        <title>Pair it</title>
+    </head>
+    <body>
+
+        <div id='main'>
+
+            <div id='circles' class='game'>
+                <h1 class="dodo">match circles to their size</h1>
+                <div class='wrapper'>
+                </div>
+            </div>
+
+            <div id='symbols' class='game'>
+                <h1 class="dodo">tap the symbol </h1> <br> <h3>&</h3>
+                <div class='wrapper'>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+
+
+

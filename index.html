@@ -19,73 +19,6 @@
         
      
 
-            html, body { 
-            	margin: 0; 
-            	padding: 0;
-            	background: url(../img/1.jpg) no-repeat center center fixed; 
-            	background: #372041;
-            	text-align: center;
-            	color: white; 
-            	text-align: center;
-            	position: relative;
-            	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-            	}
-            			 
-            
-            
-            
-
-            .circle-container {
-                padding: 10px;
-                display: inline-block;
-                text-align: center;
-            }
-            .circle {
-              border: 6px solid #fff;
-                border-radius: 50%;
-                background-color: #826496;
-                display: inline-block;
-         
-            }
-            .dashed {
-                border-radius: 50%;
-                border: 2px dotted #fff;
-                background-color: transparent;
-            }
-            .dropped {
-                border: 2px solid transparent;
-                background: #2a1a33;
-            }
-
-            .separator {
-                margin: 30px;
-            }
-            
-
-            h1 { 
-	            text-rendering: optimizelegibility;
-	            margin:0 0 15px;
-		       font-size:33px;
-		       color:#000;
-		       font-weight: 300;
-		       padding-bottom: 10px;
-		       border-bottom: 1px solid #eee;
-	      
-            }
-            
-            .dodo {
-	           margin: 80px 10px 25px;
-	           font-size: 40px;
-	           text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
-	           color: #fff;
-	           border: none;
-	           padding: 0;
-	           }
-            
-            
-            #main{padding-top: 5%;
-            }
-
 
         </style>
         <script type="text/javascript">
@@ -200,15 +133,22 @@
 
   
         <div id='main'>
-            <h1 class="dodo">match circles to their size</h1>
-            <div class='wrapper'>
-                <div class='separator'>
-                </div>
-                <div id='ordered-circles'>
-                </div>
-                <div id='unordered-circles'>
+
+            <div id='circles' class='game'>
+                <h1 class="dodo">match circles to their size</h1>
+                <div class='wrapper'>
+                    <div class='separator'>
+                    </div>
+                    <div id='ordered-circles'>
+                    </div>
+                    <div id='unordered-circles'>
+                    </div>
                 </div>
             </div>
+
+            <div id='symbols' class='game'>
+            </div>
+
         </div>
     </body>
 </html>

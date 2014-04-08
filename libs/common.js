@@ -1,5 +1,5 @@
 
-function correctAnswer(message, cssclass, nextUrl) {
+function correctAnswer(message, cssclass) {
 
     var correct = $('<div>')
         .attr('id', 'correct')
@@ -10,11 +10,5 @@ function correctAnswer(message, cssclass, nextUrl) {
         .addClass('inner')
         .html(message)
         .appendTo(correct);
-
-    if(nextUrl !== undefined) {
-        setTimeout(function(){
-            window.location = nextUrl;
-        }, 800);
-    }
 
 }
