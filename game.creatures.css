@@ -1,0 +1,33 @@
+
+
+#creatures {
+    background: #207d45;
+}
+
+
+#creatures #letters {
+    position: relative;
+}
+#creatures .letter {
+    background-color: #2ec269;
+    border: 6px solid #fff;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    margin: 15px;
+    
+ 
+}
+#creatures .dashed {
+    border-radius: 50%;
+    border: 2px dotted rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+}
+#creatures .dropped {
+    border: 2px solid transparent;
+    background: #0f0;
+}
+#creatures .ui-sortable-placeholder {  display: inline-block; height: 100px; height: 30px; }
