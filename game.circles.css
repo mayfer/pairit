@@ -11,7 +11,7 @@
     text-align: center;
 }
 #circles .circle {
-  border: 6px solid #fff;
+    border: 6px solid #fff;
     border-radius: 50%;
     background-color: #826496;
     display: inline-block;

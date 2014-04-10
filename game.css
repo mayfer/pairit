@@ -19,8 +19,8 @@ html, body {
 }
 
 .game {
-    height: 100%;
-    width: 100%;
+    padding-top: 80px;
+    display: none;
 }
 
 
@@ -32,7 +32,6 @@ html, body {
 
 h1 { 
     text-rendering: optimizelegibility;
-    margin:0 0 15px;
     font-size:33px;
     color:#000;
     font-weight: 300;
@@ -41,13 +40,13 @@ h1 {
 }
 
 
-h3 {font-size:90px;
-   margin:0px;
-   padding-bottom: -70px;
+h3 {
+    font-size:90px;
+    margin:0px;
+    padding-bottom: -70px;
 } 
 
 .dodo {
-    margin: 80px 10px 25px;
     font-size: 40px;
     text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
     color: #fff;

@@ -1,0 +1,22 @@
+#timer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+}
+
+#timer .inner {
+    margin: 0px 10px 20px 10px;
+    border-top: 20px solid #fff;
+}
+
+#timer .inner .gauge {
+    border-radius: 10px;
+    width: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #fff;
+}
+

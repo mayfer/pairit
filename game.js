@@ -5,7 +5,7 @@ startGame = function(){
         window.circles_game,
         window.symbols_game,
         //window.draw_game,
-        //window.words_game,
+        window.words_game,
     ];
 
     this.start = function() {

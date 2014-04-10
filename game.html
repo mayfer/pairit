@@ -21,10 +21,13 @@
         <script type='text/javascript' src='game.words.js'></script>
         <script type='text/javascript' src='game.js'></script>
 
-         <link rel="stylesheet" href="game.css">
-         <link rel="stylesheet" href="game.circles.css">
-         <link rel="stylesheet" href="game.symbols.css">
-         <link rel="stylesheet" href="game.words.css">
+        <script type='text/javascript' src='timer.js'></script>
+        <link rel="stylesheet" href="timer.css">
+
+        <link rel="stylesheet" href="game.css">
+        <link rel="stylesheet" href="game.circles.css">
+        <link rel="stylesheet" href="game.symbols.css">
+        <link rel="stylesheet" href="game.words.css">
         
         <script type="text/javascript">
 
@@ -33,6 +36,8 @@
                 window.games = startGame();
                 window.games.start();
 
+                var timer = Timer();
+                timer.start();
             });
 
         </script>
@@ -51,11 +56,18 @@
             </div>
 
             <div id='symbols' class='game'>
-                <h1 class="dodo">tap the symbol </h1> <br> <h3>&</h3>
+                <h1 class="dodo">tap the symbol </h1>
+                <br />
+                <h3>&</h3>
                 <div class='wrapper'>
                 </div>
             </div>
 
+            <div id='words' class='game'>
+                <h1 class="dodo">rearrange symbols</h1>
+                <div class='wrapper'>
+                </div>
+            </div>
         </div>
     </body>
 </html>
