@@ -32,20 +32,20 @@ background-repeat: none;
 
 
 }
-#correct.level01 {
+#correct.circles {
 background-color: #372041;
 background-repeat:repeat-y;
 }
-#correct.level02 {
+#correct.symbols {
 	background-color: #040052
 }
-#correct.level03 {
+#correct.vowels {
 	background-color:#18504b;
 }
 #correct.level04 {
 	background-color: #25323d;
 }
-#correct.level05 {
+#correct.words {
 	background-color: #41a7a8;
 }
 

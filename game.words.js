@@ -3,7 +3,7 @@ window.words_game = function() {
     var letters_div = $('<div>').attr('id', 'letters').appendTo($('#words .wrapper'));
     $('#words').show();
 
-    $('<h3>').attr('id', 'word').appendTo(letters_div);
+    $('<h3>').attr('id', 'word').prependTo($('#words .wrapper'));
 
     function shuffle(o){ //v1.0
         for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -34,7 +34,7 @@ window.words_game = function() {
             setTimeout(function() {
                 var letters = $('#letters .letter').text();
                 if(letters == window.original_word) {
-                    correctAnswer("Correct!", "level05", './02 copy.html'); 
+                    window.games.next("Correct!", "words");
                 }
             }, 100);
         }
