@@ -8,7 +8,7 @@ startGame = function(){
         window.symbols_game,
         window.vowels_game,
         window.words_game,
-        window.draw_game,
+      //  window.draw_game,
         window.creatures_game,
     ];
 

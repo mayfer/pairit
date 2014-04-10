@@ -1,6 +1,10 @@
-
+#words { 
+    background: #41a7a8;
+  
+}
 #letters {
     position: relative;
+    
 }
 #words .letter {
     background-color: #2a8f98;
