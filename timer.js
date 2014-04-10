@@ -18,6 +18,8 @@ var Timer = function() {
                 timer.time += 1;
                 var height = timer.baseHeight + Math.round(timer.totalHeight * timer.time/timer.duration);
                 gauge.animate({height: height+"px" }, {queue: false, duration: 1000, easing: 'linear'})
+            } else {
+                $('#game-over').show();
             }
         }, 1000);
     }
