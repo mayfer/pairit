@@ -32,5 +32,11 @@ startGame = function(){
         }, 800);
     };
 
+    $(document).keydown(function( event ) {
+        if ( event.which == 88 ) {
+            window.games.next('Correct!', $('.game:visible').attr('id'));
+        }
+    });
+
     return this;
 }
