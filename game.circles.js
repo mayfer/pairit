@@ -4,7 +4,6 @@ window.circles_game = function() {
     $('<div>').attr('id', 'ordered-circles').appendTo('#circles .wrapper');
     $('<div>').attr('id', 'unordered-circles').appendTo('#circles .wrapper');
 
-    $('.game').hide();
     $('#circles').show();
 
     var num_circles = 5;
@@ -82,7 +81,7 @@ window.circles_game = function() {
 
                 if($('.circle.dropped').length == $('#unordered-circles .circle').length) {
                     setTimeout(function() {
-                        window.games.next("Correct!", "level01");
+                        window.games.next("Correct!", "circles");
                     }, delay);
                 }
             },
