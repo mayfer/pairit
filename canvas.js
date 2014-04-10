@@ -166,7 +166,7 @@ function drawingCanvas(jq_elem) {
         //console.log(matches);
         if(matches >= this.letterNumPixels - this.slack) {
             setTimeout(function() {
-                window.game.next("Correct!", "draw");
+                window.games.next("Correct!", "draw");
             }, 150);
         }
     }
