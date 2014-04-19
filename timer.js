@@ -12,8 +12,11 @@ var Timer = function() {
     timer.totalHeight = $('body').innerHeight() - timer.baseHeight - 40;
     gauge.css('height', timer.baseHeight+'px');
 
+
+    timer.handler = null;
+
     timer.start = function() {
-        setInterval(function(){
+        timer.handler = setInterval(function(){
             if(timer.time < timer.duration) {
                 timer.time += 1;
                 var height = timer.baseHeight + Math.round(timer.totalHeight * timer.time/timer.duration);
@@ -23,6 +26,6 @@ var Timer = function() {
             }
         }, 1000);
     }
-    
+
     return timer;
 }
