@@ -4,11 +4,11 @@ startGame = function(){
     this.current_game = 0;
 
     this.game_types = [
+        window.draw_game,
         window.circles_game,
         window.symbols_game,
         window.vowels_game,
         window.words_game,
-      //  window.draw_game,
         window.creatures_game,
     ];
 

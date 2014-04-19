@@ -89,6 +89,10 @@ function drawingCanvas(jq_elem) {
             e.preventDefault();
             that.stopDrawing();
         });
+
+        this.answerChecker = setInterval(function() {
+            that.compareDrawnArea();
+        }, 500);
     }
 
     this.startDrawing = function() {
@@ -110,8 +114,6 @@ function drawingCanvas(jq_elem) {
             
         ctx.lineTo(current_position.x, current_position.y);
         ctx.stroke();
-
-        this.compareDrawnArea();
     }
     this.getCursorPosition = function(e) {
 
@@ -140,13 +142,17 @@ function drawingCanvas(jq_elem) {
         var imgdata = this.getPixelData()
         this.letterImageData = imgdata.data;
         this.letterNumPixels = 0;
-        for(var i=3; i<this.letterImageData.length; i += 4) {
+
+        this.letterPixelCoordinates = [];
+
+        for(var i=0; i<this.letterImageData.length; i += 4) {
             //this.letterImageData[i-3] = 250;
-            if(this.letterImageData[i] > 0) {
+            if(this.letterImageData[i] == 120) {
                 this.letterNumPixels++;
+                this.letterPixelCoordinates.push(i);
             }
         }
-        this.slack = this.letterNumPixels / 5;
+        this.slack = this.letterNumPixels / 10;
         //ctx.putImageData(imgdata, 0, 0);
     }
 
@@ -158,13 +164,21 @@ function drawingCanvas(jq_elem) {
         var current = this.getPixelData().data;
 
         var matches = 0;
-        for(var i=0; i<letter.length; i += 4) {
+        /*for(var i=0; i<letter.length; i += 4) {
             if(letter[i] > 0 && current[i] != letter[i]) {
                 matches++;
             }
+        }*/
+        for(var i=0; i<this.letterPixelCoordinates.length; i++) {
+            if(current[this.letterPixelCoordinates[i]] != letter[this.letterPixelCoordinates[i]]) {
+                matches++;
+            }
         }
+        console.log(matches, this.letterNumPixels);
         //console.log(matches);
         if(matches >= this.letterNumPixels - this.slack) {
+            clearInterval(this.answerChecker);
+
             setTimeout(function() {
                 window.games.next("Correct!", "draw");
             }, 150);
