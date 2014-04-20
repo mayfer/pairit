@@ -3,7 +3,6 @@
 <html>
     <head>
         <link rel='shortcut icon' href='#' />
-         <link rel="stylesheet" href="libs/style.css">
          <link rel="stylesheet" href="libs/animate.css">
         <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1'>
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -88,101 +87,42 @@
         <script type="text/javascript">
 
 
-        $(document).ready(function(){
+        function shuffle(array) {
+            var currentIndex = array.length
+                , temporaryValue
+                , randomIndex
+                ;
 
-            var num_circles = 5;
-            var circle_sizes = [];
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
 
-            function number_different_enough(num, num_array, range) {
-                for(var i=0; i<num_array.length; i++) {
-                    if(Math.abs(num - num_array[i]) < range) {
-                        return false;
-                    }
-                }
-                return true;
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
             }
 
-            for(var i = 0; i < num_circles; i++) {
-                var size;
-                do {
-                    size = parseInt(Math.random() * 80 + 50);
-                } while(!number_different_enough(size, circle_sizes, 10))
+            return array;
+        }
 
-                circle_sizes.push(size);
-
-                var circle_container = $('<div>').addClass('circle-container');
-                var circle = $('<div>')
-                    .addClass('circle')
-                    .addClass('size-'+size)
-                    .width(size)
-                    .height(size)
-                    .appendTo(circle_container);
-
-                $('#unordered-circles').append(circle_container);
-
-
+        function find_random_numbers_apart(num_numbers, min, max, difference) {
+            var size = max;
+            var all_sizes = [];
+            while(size >= min) {
+                all_sizes.push(size);
+                size -= difference;
             }
+            shuffle(all_sizes);
+            return all_sizes.splice(0, num_numbers);
+        }
 
-            circle_sizes = circle_sizes.sort(function(a,b) { return a - b;});
-            console.log(circle_sizes);
-            for(var i = 0; i < num_circles; i++) {
-                var size = circle_sizes[i];
-                var circle_container = $('<div>').addClass('circle-container');
-                var circle = $('<div>')
-                    .addClass('circle').addClass('dashed')
-                    .width(size)
-                    .height(size)
-                    .data('size', size)
-                    .appendTo(circle_container);
-
-                $('#ordered-circles').append(circle_container);
-            }
-
-            $('#unordered-circles .circle').draggable({
-                revert : function(event, ui) {
-                    $(this).data("uiDraggable").originalPosition = {
-                        top : 0,
-                        left : 0
-                    };
-                    return !event;
-                }
-            });
-
-            $('#ordered-circles .circle').each(function() {
-                var delay = 150;
-                $(this).droppable({
-                    drop: function( event, ui ) {
-                        $( this )
-                            .addClass("dropped");
-                        var drop_p = $(this).offset();
-                        var drag_p = ui.draggable.offset();
-                        var left_end = drop_p.left - drag_p.left + 1;
-                        var top_end = drop_p.top - drag_p.top + 1;
-                        ui.draggable.animate({
-                            top: '+=' + top_end,
-                            left: '+=' + left_end
-                        }, delay);
-
-                        if($('.circle.dropped').length == $('#unordered-circles .circle').length) {
-                            setTimeout(function() {
-                                correctAnswer("Correct!", "./02.html");
-                            }, delay);
-                        }
-                    },
-                    accept: '.size-'+$(this).data('size'),
-                });
-            });
+        console.log('numbers');
+        console.log(find_random_numbers_apart(5, 50, 130, 20));
         
-
-
-            $('h1').addClass('animated bounceInDown ');
-            
-
-            correctAnswer('Hi brennfuck st test', "tester", undefined);
-
-
-        });
-
 
 
 

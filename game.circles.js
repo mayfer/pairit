@@ -9,20 +9,43 @@ window.circles_game = function() {
     var num_circles = 5;
     var circle_sizes = [];
 
-    function number_different_enough(num, num_array, range) {
-        for(var i=3; i<num_array.length; i++) {
-            if(Math.abs(num - num_array[i]) < range) {
-                return false;
-            }
+    function shuffle(array) {
+        var currentIndex = array.length
+            , temporaryValue
+            , randomIndex
+            ;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
         }
-        return true;
+
+        return array;
     }
 
+    function find_random_numbers_apart(num_numbers, min, max, difference) {
+        var size = max;
+        var all_sizes = [];
+        while(size >= min) {
+            all_sizes.push(size);
+            size -= difference;
+        }
+        shuffle(all_sizes);
+        return all_sizes.splice(0, num_numbers);
+    }
+
+    var sizes = find_random_numbers_apart(num_circles, 50, 130, 20);
+
     for(var i = 0; i < num_circles; i++) {
-        var size;
-        do {
-            size = parseInt(Math.random() * 80 + 50);
-        } while(!number_different_enough(size, circle_sizes, 10))
+        var size = sizes[i];
 
         circle_sizes.push(size);
 
