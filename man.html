@@ -31,21 +31,94 @@
                    
             #main a{color: #fff;
             text-decoration: none;
-            }
+                        }
             
             .lama{
-	position: absolute;
+
 	top: 50%;
 	left:50%;
 	margin-top: -140px;
-	margin-left: -260px;
 	border-radius: 30px;
 	width:520px;
 	height:280px;
+	padding: 30px;
     background-color: #f15c32;
+
+
+
 }
-            
-       
+
+
+.image {
+
+    top: 50%;
+  
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(-40deg);
+  }
+  25% { 
+    -webkit-transform: rotate(40deg);
+  }
+  
+   50% { 
+    -webkit-transform: rotate(-40deg);
+  }
+  
+   75% { 
+    -webkit-transform: rotate(40deg);
+  }
+  
+  
+   100% { 
+    -webkit-transform: rotate(-40deg);
+  }
+  
+ 
+}
+
+
+
+
+
+.image
+{
+position: relative;
+
+float:left;
+
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         10s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-transition-timing-function: linear;
+    }
+    
+    .love
+{  top: 50%;
+    
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+
+
+
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         10s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-transition-timing-function: linear;
+    }
+    
+ 
 	            
 	       h1 {
 	    
@@ -68,11 +141,23 @@
         <title>Parrot</title>
     </head>
     <body>
-        <div id='main'>
-           <a href="game.html"><div class="lama"><h3>parrot</h3><br> <h1>let's play!</h1></div> </a> 
+        <div id='main'><h3>parrot</h3>
+
+           <a href="game.html">
+                 
+ <div class="lama love"><h1>2 player</h1>
+
+           </div> 
+           
+            <div class="lama image"><h1>1 player</h1>
+           <br>          
+
+           </div> 
+            
+           </a> 
          
                 <div id='letters'></div>
-    </body>
+                        </body>
 </html>
 
 
