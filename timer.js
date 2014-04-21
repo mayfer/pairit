@@ -1,7 +1,7 @@
 
 var Timer = function() {
     var timer = this;
-    timer.time = 0;
+    timer.time = 10.0;
 <<<<<<< HEAD
 <<<<<<< HEAD
     timer.duration = 360;
