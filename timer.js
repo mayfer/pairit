@@ -3,7 +3,11 @@ var Timer = function() {
     var timer = this;
     timer.time = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
     timer.duration = 360;
+=======
+    timer.duration = 10;
+>>>>>>> FETCH_HEAD
 =======
     timer.duration = 10;
 >>>>>>> FETCH_HEAD
