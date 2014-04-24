@@ -1,16 +1,8 @@
 
 var Timer = function() {
     var timer = this;
-    timer.time = 10.0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    timer.duration = 360;
-=======
+    timer.time = 0;
     timer.duration = 10;
->>>>>>> FETCH_HEAD
-=======
-    timer.duration = 10;
->>>>>>> FETCH_HEAD
 
     var timerdiv = $('<div>').attr('id', 'timer').appendTo($('body'));
     var inner = $('<div>').addClass('inner').appendTo(timerdiv);
