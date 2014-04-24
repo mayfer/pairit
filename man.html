@@ -21,7 +21,7 @@
     
 	        html, body {
           	
-          		background: #193059;
+          		background: #fff;
           		color: white; 
             	text-align: center;
             	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -34,15 +34,17 @@
                         }
             
             .lama{
-
+position: relative;	
+float: left;
+margin: 30px;
+padding: 40px;
 	top: 50%;
-	left:50%;
-	margin-top: -140px;
+	left:28%;
+
 	border-radius: 30px;
 	width:520px;
 	height:280px;
 	padding: 30px;
-    background-color: #f15c32;
 
 
 
@@ -55,7 +57,7 @@
   
     width: 120px;
     height: 120px;
-    margin:-60px 0 0 -60px;
+
     -webkit-animation:spin 4s linear infinite;
     -moz-animation:spin 4s linear infinite;
     animation:spin 4s linear infinite;
@@ -92,10 +94,10 @@
 {
 position: relative;
 
-float:left;
+
 
     -webkit-animation-name:             rotate; 
-    -webkit-animation-duration:         10s; 
+    -webkit-animation-duration:         20s; 
     -webkit-animation-iteration-count:  infinite;
     -webkit-transition-timing-function: linear;
     }
@@ -121,7 +123,9 @@ float:left;
  
 	            
 	       h1 {
-	    
+	       margin-top: 20px; 
+	       vertical-align: middle;
+	    text-align: center;
 		       margin:0px;
 		       font-size:28px;
 		       color:#fff;
@@ -131,6 +135,7 @@ float:left;
 		       }
                     
            h3 {font-size:80px;
+           color: #000;
 	      
 	          } 
         </style>
@@ -145,12 +150,13 @@ float:left;
 
            <a href="game.html">
                  
- <div class="lama love"><h1>2 player</h1>
+ <div class="lama image">
+ <img src="img/1player.png">
 
            </div> 
            
-            <div class="lama image"><h1>1 player</h1>
-           <br>          
+            <div class="lama image"><img src="img/2player.png">
+           <br> </div>         
 
            </div> 
             
