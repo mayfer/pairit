@@ -6,10 +6,6 @@ window.numbers_game = function() {
 
     $('#numbers').show();
 
-    var word = (Math.floor(Math.random()*90000) + 10000).toString();
-
-    var num_circles = 5;
-    var letters = word.split('');
 
     function shuffle(array) {
         var currentIndex = array.length
@@ -33,6 +29,10 @@ window.numbers_game = function() {
         return array;
     }
 
+    var word = "0123456789"
+    var letters = word.split('');
+    letters = shuffle(letters).splice(0, 5);
+    word = letters.join('');
 
     for(var i = 0; i < letters.length; i++) {
 
