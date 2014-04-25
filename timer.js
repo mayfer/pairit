@@ -25,6 +25,9 @@ var Timer = function() {
                 $('#score').html(window.games.current_game);
                 $('#total-time').html(timer.duration);
                 $('#game-over').show();
+                setTimeout(function(){
+                    window.location = 'man.html';
+                }, 5000);
             }
         }, 1000);
     }

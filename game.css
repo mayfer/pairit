@@ -18,6 +18,10 @@ html, body {
     position: relative;
 }
 
+.flip {
+    -webkit-transform: rotate(180deg);
+}
+
 .space {
     height: 80px;
 }

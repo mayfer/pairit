@@ -63,7 +63,6 @@ window.circles_game = function() {
     }
 
     circle_sizes = circle_sizes.sort(function(a,b) { return a - b;});
-    console.log(circle_sizes);
     for(var i = 0; i < num_circles; i++) {
         var size = circle_sizes[i];
         var circle_container = $('<div>').addClass('circle-container');
