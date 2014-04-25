@@ -31,7 +31,8 @@
 
 }
 #words .dashed {
-    border: 6px dotted #12ddc0;
+    border: 2px dotted #12ddc0;
+    padding: 4px;
     background-color: transparent;
     color: #12ddc0;
 }

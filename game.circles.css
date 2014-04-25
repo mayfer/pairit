@@ -19,10 +19,10 @@
 }
 #circles .dashed {
     border-radius: 50%;
-    border: 6px dotted #fff;
+    border: 2px dotted #fff;
     background-color: transparent;
 }
 #circles .dropped {
-    border: 6px solid transparent;
+    border: 2px solid transparent;
     background: #2a1a33;
 }

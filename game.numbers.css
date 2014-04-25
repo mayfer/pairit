@@ -31,7 +31,8 @@
 
 }
 #numbers .dashed {
-    border: 6px dotted #25c143;
+    border: 2px dotted #25c143;
+    padding: 4px;
     background-color: transparent;
     color: #25c143;
 }
