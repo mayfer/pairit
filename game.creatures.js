@@ -11,7 +11,7 @@ window.creatures_game = function() {
     };
 
 
-    var words = "{0}`~ __@#_ ojOj0 {0}`~ __@#_ ojOj0 {0}`~ __@#_ ojOj0".split(" ");
+    var words = "{0}`~ __@#_ ojOj0 {0}`~ __@#_ ojOj0 {0}`~ __@#_ ojOj0 	".split(" ");
     var word = words[Math.round(Math.random() * (words.length-1))];
 
     window.original_word = word;
