@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3BB03128-4754-4D69-8EEE-9EA1A3212ED8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>teaorbit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E3762640-C49A-4233-A578-0639FEFA24F1</key>
+		<string>ssh://github.com/mayfer/teaorbit-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>teaorbit.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E3762640-C49A-4233-A578-0639FEFA24F1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/mayfer/teaorbit-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E3762640-C49A-4233-A578-0639FEFA24F1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E3762640-C49A-4233-A578-0639FEFA24F1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>teaorbit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
