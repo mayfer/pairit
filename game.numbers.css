@@ -9,7 +9,7 @@
 
 
 #numbers { 
-    background: #f7921c;
+    background: #e19525;
   
 }
 #numbers .letter-container {
@@ -31,7 +31,7 @@
 
 }
 #numbers .dashed {
-    border: 2px dotted #fff;
+    border: 2px dotted #fdbf6c;
     padding: 4px;
     background-color: transparent;
     color: #fdbf6c;
