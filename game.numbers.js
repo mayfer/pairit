@@ -29,7 +29,7 @@ window.numbers_game = function() {
         return array;
     }
 
-    var word = "0123456789"
+    var word = "③⑥②⑱"
     var letters = word.split('');
     letters = shuffle(letters).splice(0, 5);
     word = letters.join('');

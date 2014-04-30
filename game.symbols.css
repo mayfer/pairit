@@ -1,10 +1,10 @@
 #symbols {
-    background: #040052;
+    background: #418723;
 }
 
 #symbols .letter { 
-    border-radius: 40px;
-    background-color: #009ed7;
+    border-radius: 6%;
+    background-color: #9ec10e;
     border: 6px solid #fff;
     display: inline-block;
     width: 150px;
@@ -16,7 +16,7 @@
 
 }
 #symbols .dashed {
-    border-radius: 50%;
+    border-radius: 10%;
     border: 2px dotted rgba(0, 0, 0, 0.5);
     background-color: transparent;
 }

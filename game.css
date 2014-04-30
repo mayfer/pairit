@@ -68,6 +68,16 @@ h3 {
     color:#fff;
 } 
 
+h4 {
+    font-size:150px;
+    margin:0px;
+    padding-bottom: -70px;
+    text-decoration: none;
+    color:#fff;
+} 
+
+
+
 .dodo {
     font-size: 40px;
     text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
@@ -157,7 +167,7 @@ h1 {
 	background-repeat:repeat-y;
 }
 #correct.symbols {
-	background-color: #040052
+	background-color: #5180af;
 }
 #correct.vowels {
 	background-color:#18504b;
@@ -173,7 +183,9 @@ h1 {
 	background-color: #207d45;
 }
 
-
+#correct.numbers{
+	background-color:#e19525;
+}
 #arrows {
     background: #aaa;
     height: 100%;

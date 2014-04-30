@@ -13,11 +13,12 @@
   
 }
 #numbers .letter-container {
+
     padding: 10px;
     display: inline-block;
     text-align: center;
 }
-#numbers .letter {
+#numbers .letter {border-radius: 100%;	
     border: 6px solid #fff;
     background-color: #fdbf6c;
     display: inline-block;
@@ -31,7 +32,8 @@
 
 }
 #numbers .dashed {
-    border: 2px dotted #fdbf6c;
+    border: 1px dotted #fdbf6c;
+    border-radius: 100%;
     padding: 4px;
     background-color: transparent;
     color: #fdbf6c;

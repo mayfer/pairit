@@ -10,10 +10,10 @@ window.symbols_game = function() {
     };
 
 
-    var vowels_str = "♥"
+    var vowels_str = "⚛"
     var vowels = vowels_str.split(" ");
 
-    var consonants_str = "% ? @"
+    var consonants_str = "☀ ⁕ ∺"
     var consonants = consonants_str.split(" ");
     var all_letters = vowels.concat(consonants);
 
