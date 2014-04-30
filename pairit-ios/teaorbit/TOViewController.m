@@ -31,10 +31,18 @@
 
     _TOWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     NSLog(@"Frame size %f by %f", self.view.frame.size.width, self.view.frame.size.height);
+    /*
     NSString *url = @"http://safinaz.local/~murat/Code/pairit/man.html";
     NSURL *nsurl = [NSURL URLWithString:url];
     NSURLRequest *nsrequest = [NSURLRequest requestWithURL:nsurl];
     [_TOWebView loadRequest:nsrequest];
+    */
+    NSURL *htmlFile = [[NSBundle mainBundle] URLForResource:@"man" withExtension:@"html"];
+    NSLog(@"file: %@", htmlFile);
+    
+    NSURLRequest *urlReq = [NSURLRequest requestWithURL:htmlFile];
+    [_TOWebView loadRequest:urlReq];
+    
     [self.view addSubview:_TOWebView];
 
     _TOWebView.delegate = self;
@@ -48,6 +56,10 @@
             } else {
                 rotation = 1.0;
             }
+        }
+        if([data isEqualToString:@"unflip"]) {
+            _TOWebView.layer.transform = CATransform3DMakeRotation(M_PI, 0, 0, 0.0);
+            rotation = 1.0;
         }
         responseCallback(@"Right back atcha");
     }];

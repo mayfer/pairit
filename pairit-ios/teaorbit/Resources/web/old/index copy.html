@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='shortcut icon' href='#' />
+         <link rel="stylesheet" href="libs/style.css">
+         <link rel="stylesheet" href="libs/animate.css">
+        <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1'>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link href="" sizes="144x144" rel="apple-touch-icon">
+        <link href="" rel="apple-touch-startup-image">
+        <script type='text/javascript' src='libs/jquery.min.js'></script>
+        <script type='text/javascript' src='libs/jquery-ui-1.10.4.custom.min.js'></script>
+        <script type='text/javascript' src='libs/jquery.ui.touch-punch.js'></script>
+        <script type='text/javascript' src='libs/common.js'></script>
+        
+        <style type="text/css">
+        
+     
+            html, body { 
+            	margin: 0; 
+            	padding: 0;
+            	background: url(../img/1.jpg) no-repeat center center fixed; 
+            	background: #372041;
+            	text-align: center;
+            	color: white; 
+            	text-align: center;
+            	position: relative;
+            	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            	}
+            			 
+            
+            
+            
+
+            .circle-container {
+                padding: 10px;
+                display: inline-block;
+                text-align: center;
+            }
+            .circle {
+              border: 6px solid #fff;
+                border-radius: 50%;
+                background-color: #826496;
+                display: inline-block;
+         
+            }
+            .dashed {
+                border-radius: 50%;
+                border: 2px dotted #fff;
+                background-color: transparent;
+            }
+            .dropped {
+                border: 2px solid transparent;
+                background: #2a1a33;
+            }
+
+            .separator {
+                margin: 30px;
+            }
+            
+
+            h1 { 
+	            text-rendering: optimizelegibility;
+	            margin:0 0 15px;
+		       font-size:33px;
+		       color:#000;
+		       font-weight: 300;
+		       padding-bottom: 10px;
+		       border-bottom: 1px solid #eee;
+	      
+            }
+            
+            .dodo {
+	           margin: 80px 10px 25px;
+	           font-size: 40px;
+	           text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+	           color: #fff;
+	           border: none;
+	           padding: 0;
+	           }
+            
+            
+            #main{padding-top: 5%;
+            }
+
+
+        </style>
+        <script type="text/javascript">
+
+
+        $(document).ready(function(){
+
+            var num_circles = 5;
+            var circle_sizes = [];
+
+            function number_different_enough(num, num_array, range) {
+                for(var i=0; i<num_array.length; i++) {
+                    if(Math.abs(num - num_array[i]) < range) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            for(var i = 0; i < num_circles; i++) {
+                var size;
+                do {
+                    size = parseInt(Math.random() * 80 + 50);
+                } while(!number_different_enough(size, circle_sizes, 10))
+
+                circle_sizes.push(size);
+
+                var circle_container = $('<div>').addClass('circle-container');
+                var circle = $('<div>')
+                    .addClass('circle')
+                    .addClass('size-'+size)
+                    .width(size)
+                    .height(size)
+                    .appendTo(circle_container);
+
+                $('#unordered-circles').append(circle_container);
+
+
+            }
+
+            circle_sizes = circle_sizes.sort(function(a,b) { return a - b;});
+            console.log(circle_sizes);
+            for(var i = 0; i < num_circles; i++) {
+                var size = circle_sizes[i];
+                var circle_container = $('<div>').addClass('circle-container');
+                var circle = $('<div>')
+                    .addClass('circle').addClass('dashed')
+                    .width(size)
+                    .height(size)
+                    .data('size', size)
+                    .appendTo(circle_container);
+
+                $('#ordered-circles').append(circle_container);
+            }
+
+            $('#unordered-circles .circle').draggable({
+                revert : function(event, ui) {
+                    $(this).data("uiDraggable").originalPosition = {
+                        top : 0,
+                        left : 0
+                    };
+                    return !event;
+                }
+            });
+
+            $('#ordered-circles .circle').each(function() {
+                var delay = 150;
+                $(this).droppable({
+                    drop: function( event, ui ) {
+                        $( this )
+                            .addClass("dropped");
+                        var drop_p = $(this).offset();
+                        var drag_p = ui.draggable.offset();
+                        var left_end = drop_p.left - drag_p.left + 1;
+                        var top_end = drop_p.top - drag_p.top + 1;
+                        ui.draggable.animate({
+                            top: '+=' + top_end,
+                            left: '+=' + left_end
+                        }, delay);
+
+                        if($('.circle.dropped').length == $('#unordered-circles .circle').length) {
+                            setTimeout(function() {
+                                correctAnswer("Correct!", "level01", "./05.html");
+                            }, delay);
+                        }
+                    },
+                    accept: '.size-'+$(this).data('size'),
+                });
+            });
+        
+
+
+            $('h1').addClass('animated bounceInDown ');
+            
+
+
+
+        });
+
+
+
+
+
+
+
+        </script>
+        
+
+        <title>Pair it</title>
+    </head>
+    <body>
+
+  
+        <div id='main'>
+            <h1 class="dodo">match circles to their size</h1>
+            <div class='wrapper'>
+                <div class='separator'>
+                </div>
+                <div id='ordered-circles'>
+                </div>
+                <div id='unordered-circles'>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+

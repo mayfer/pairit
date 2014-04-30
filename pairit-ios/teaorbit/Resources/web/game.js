@@ -49,3 +49,30 @@ startGame = function(num_players){
     return this;
 }
 
+
+function connectWebViewJavascriptBridge(callback) {
+    if (window.WebViewJavascriptBridge) {
+        callback(WebViewJavascriptBridge)
+    } else {
+        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+            callback(WebViewJavascriptBridge)
+        }, false)
+    }
+}
+
+connectWebViewJavascriptBridge(function(bridge) {
+    window.js_bridge = bridge;
+
+    /* Init your app here */
+
+    bridge.init(function(message, responseCallback) {
+        alert('Received message: ' + message)   
+        if (responseCallback) {
+            responseCallback("Right back atcha (js)")
+        }
+    })
+    bridge.send('Hello from the javascript')
+    bridge.send('Please respond to this', function responseCallback(responseData) {
+        console.log("Javascript got its response", responseData)
+    })
+})

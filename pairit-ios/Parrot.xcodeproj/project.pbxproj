@@ -10,7 +10,7 @@
 		FB00BD95187C9A7A009B3E9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB00BD94187C9A7A009B3E9D /* Foundation.framework */; };
 		FB00BD97187C9A7A009B3E9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB00BD96187C9A7A009B3E9D /* CoreGraphics.framework */; };
 		FB00BD99187C9A7A009B3E9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB00BD98187C9A7A009B3E9D /* UIKit.framework */; };
-		FB00BD9F187C9A7A009B3E9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB00BD9D187C9A7A009B3E9D /* InfoPlist.strings */; };
+		FB00BD9F187C9A7A009B3E9D /* InfoPlist.strings in Sources */ = {isa = PBXBuildFile; fileRef = FB00BD9D187C9A7A009B3E9D /* InfoPlist.strings */; };
 		FB00BDA1187C9A7A009B3E9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB00BDA0187C9A7A009B3E9D /* main.m */; };
 		FB00BDA5187C9A7A009B3E9D /* TOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB00BDA4187C9A7A009B3E9D /* TOAppDelegate.m */; };
 		FB00BDA7187C9A7A009B3E9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB00BDA6187C9A7A009B3E9D /* Images.xcassets */; };
@@ -22,6 +22,33 @@
 		FB00BDC5187C9ADA009B3E9D /* TOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB00BDC4187C9ADA009B3E9D /* TOViewController.m */; };
 		FB00BDCA187C9B1A009B3E9D /* WebViewJavascriptBridge.js.txt in Resources */ = {isa = PBXBuildFile; fileRef = FB00BDC8187C9B1A009B3E9D /* WebViewJavascriptBridge.js.txt */; };
 		FB00BDCB187C9B1A009B3E9D /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = FB00BDC9187C9B1A009B3E9D /* WebViewJavascriptBridge.m */; };
+		FBF91CDF1911434A00CC8A36 /* canvas.js in Sources */ = {isa = PBXBuildFile; fileRef = FBF91CC41911434A00CC8A36 /* canvas.js */; };
+		FBF91CE01911434A00CC8A36 /* game.circles.css in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CC51911434A00CC8A36 /* game.circles.css */; };
+		FBF91CE11911434A00CC8A36 /* game.circles.js in Sources */ = {isa = PBXBuildFile; fileRef = FBF91CC61911434A00CC8A36 /* game.circles.js */; };
+		FBF91CE21911434A00CC8A36 /* game.creatures.css in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CC71911434A00CC8A36 /* game.creatures.css */; };
+		FBF91CE31911434A00CC8A36 /* game.creatures.js in Sources */ = {isa = PBXBuildFile; fileRef = FBF91CC81911434A00CC8A36 /* game.creatures.js */; };
+		FBF91CE41911434A00CC8A36 /* game.css in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CC91911434A00CC8A36 /* game.css */; };
+		FBF91CE51911434A00CC8A36 /* game.draw.css in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CCA1911434A00CC8A36 /* game.draw.css */; };
+		FBF91CE61911434A00CC8A36 /* game.draw.js in Sources */ = {isa = PBXBuildFile; fileRef = FBF91CCB1911434A00CC8A36 /* game.draw.js */; };
+		FBF91CE71911434A00CC8A36 /* game.html in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CCC1911434A00CC8A36 /* game.html */; };
+		FBF91CE81911434A00CC8A36 /* game.js in Sources */ = {isa = PBXBuildFile; fileRef = FBF91CCD1911434A00CC8A36 /* game.js */; };
+		FBF91CE91911434A00CC8A36 /* game.numbers.css in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CCE1911434A00CC8A36 /* game.numbers.css */; };
+		FBF91CEA1911434A00CC8A36 /* game.numbers.js in Sources */ = {isa = PBXBuildFile; fileRef = FBF91CCF1911434A00CC8A36 /* game.numbers.js */; };
+		FBF91CEB1911434A00CC8A36 /* game.symbols.css in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CD01911434A00CC8A36 /* game.symbols.css */; };
+		FBF91CEC1911434A00CC8A36 /* game.symbols.js in Sources */ = {isa = PBXBuildFile; fileRef = FBF91CD11911434A00CC8A36 /* game.symbols.js */; };
+		FBF91CED1911434A00CC8A36 /* game.vowels.css in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CD21911434A00CC8A36 /* game.vowels.css */; };
+		FBF91CEE1911434A00CC8A36 /* game.vowels.js in Sources */ = {isa = PBXBuildFile; fileRef = FBF91CD31911434A00CC8A36 /* game.vowels.js */; };
+		FBF91CEF1911434A00CC8A36 /* game.words.css in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CD41911434A00CC8A36 /* game.words.css */; };
+		FBF91CF01911434A00CC8A36 /* game.words.js in Sources */ = {isa = PBXBuildFile; fileRef = FBF91CD51911434A00CC8A36 /* game.words.js */; };
+		FBF91CF11911434A00CC8A36 /* game.words2.css in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CD61911434A00CC8A36 /* game.words2.css */; };
+		FBF91CF21911434A00CC8A36 /* game.words2.js in Sources */ = {isa = PBXBuildFile; fileRef = FBF91CD71911434A00CC8A36 /* game.words2.js */; };
+		FBF91CF31911434A00CC8A36 /* img in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CD81911434A00CC8A36 /* img */; };
+		FBF91CF41911434A00CC8A36 /* libs in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CD91911434A00CC8A36 /* libs */; };
+		FBF91CF51911434A00CC8A36 /* man.html in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CDA1911434A00CC8A36 /* man.html */; };
+		FBF91CF61911434A00CC8A36 /* positive.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CDB1911434A00CC8A36 /* positive.jpg */; };
+		FBF91CF71911434A00CC8A36 /* tester.html in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CDC1911434A00CC8A36 /* tester.html */; };
+		FBF91CF81911434A00CC8A36 /* timer.css in Resources */ = {isa = PBXBuildFile; fileRef = FBF91CDD1911434A00CC8A36 /* timer.css */; };
+		FBF91CF91911434A00CC8A36 /* timer.js in Sources */ = {isa = PBXBuildFile; fileRef = FBF91CDE1911434A00CC8A36 /* timer.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +83,33 @@
 		FB00BDC7187C9B1A009B3E9D /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		FB00BDC8187C9B1A009B3E9D /* WebViewJavascriptBridge.js.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebViewJavascriptBridge.js.txt; sourceTree = "<group>"; };
 		FB00BDC9187C9B1A009B3E9D /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		FBF91CC41911434A00CC8A36 /* canvas.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = canvas.js; path = ../canvas.js; sourceTree = "<group>"; };
+		FBF91CC51911434A00CC8A36 /* game.circles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = game.circles.css; path = ../game.circles.css; sourceTree = "<group>"; };
+		FBF91CC61911434A00CC8A36 /* game.circles.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = game.circles.js; path = ../game.circles.js; sourceTree = "<group>"; };
+		FBF91CC71911434A00CC8A36 /* game.creatures.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = game.creatures.css; path = ../game.creatures.css; sourceTree = "<group>"; };
+		FBF91CC81911434A00CC8A36 /* game.creatures.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = game.creatures.js; path = ../game.creatures.js; sourceTree = "<group>"; };
+		FBF91CC91911434A00CC8A36 /* game.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = game.css; path = ../game.css; sourceTree = "<group>"; };
+		FBF91CCA1911434A00CC8A36 /* game.draw.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = game.draw.css; path = ../game.draw.css; sourceTree = "<group>"; };
+		FBF91CCB1911434A00CC8A36 /* game.draw.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = game.draw.js; path = ../game.draw.js; sourceTree = "<group>"; };
+		FBF91CCC1911434A00CC8A36 /* game.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = game.html; path = ../game.html; sourceTree = "<group>"; };
+		FBF91CCD1911434A00CC8A36 /* game.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = game.js; path = ../game.js; sourceTree = "<group>"; };
+		FBF91CCE1911434A00CC8A36 /* game.numbers.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = game.numbers.css; path = ../game.numbers.css; sourceTree = "<group>"; };
+		FBF91CCF1911434A00CC8A36 /* game.numbers.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = game.numbers.js; path = ../game.numbers.js; sourceTree = "<group>"; };
+		FBF91CD01911434A00CC8A36 /* game.symbols.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = game.symbols.css; path = ../game.symbols.css; sourceTree = "<group>"; };
+		FBF91CD11911434A00CC8A36 /* game.symbols.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = game.symbols.js; path = ../game.symbols.js; sourceTree = "<group>"; };
+		FBF91CD21911434A00CC8A36 /* game.vowels.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = game.vowels.css; path = ../game.vowels.css; sourceTree = "<group>"; };
+		FBF91CD31911434A00CC8A36 /* game.vowels.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = game.vowels.js; path = ../game.vowels.js; sourceTree = "<group>"; };
+		FBF91CD41911434A00CC8A36 /* game.words.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = game.words.css; path = ../game.words.css; sourceTree = "<group>"; };
+		FBF91CD51911434A00CC8A36 /* game.words.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = game.words.js; path = ../game.words.js; sourceTree = "<group>"; };
+		FBF91CD61911434A00CC8A36 /* game.words2.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = game.words2.css; path = ../game.words2.css; sourceTree = "<group>"; };
+		FBF91CD71911434A00CC8A36 /* game.words2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = game.words2.js; path = ../game.words2.js; sourceTree = "<group>"; };
+		FBF91CD81911434A00CC8A36 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; name = img; path = ../img; sourceTree = "<group>"; };
+		FBF91CD91911434A00CC8A36 /* libs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = libs; path = ../libs; sourceTree = "<group>"; };
+		FBF91CDA1911434A00CC8A36 /* man.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = man.html; path = ../man.html; sourceTree = "<group>"; };
+		FBF91CDB1911434A00CC8A36 /* positive.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = positive.jpg; path = ../positive.jpg; sourceTree = "<group>"; };
+		FBF91CDC1911434A00CC8A36 /* tester.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = tester.html; path = ../tester.html; sourceTree = "<group>"; };
+		FBF91CDD1911434A00CC8A36 /* timer.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = timer.css; path = ../timer.css; sourceTree = "<group>"; };
+		FBF91CDE1911434A00CC8A36 /* timer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = timer.js; path = ../timer.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +139,7 @@
 		FB00BD88187C9A7A009B3E9D = {
 			isa = PBXGroup;
 			children = (
+				FBF91BFF19113AF900CC8A36 /* Resources */,
 				FB00BD9A187C9A7A009B3E9D /* teaorbit */,
 				FB00BDB3187C9A7A009B3E9D /* teaorbitTests */,
 				FB00BD93187C9A7A009B3E9D /* Frameworks */,
@@ -165,6 +220,40 @@
 			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
+		FBF91BFF19113AF900CC8A36 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBF91CC41911434A00CC8A36 /* canvas.js */,
+				FBF91CC51911434A00CC8A36 /* game.circles.css */,
+				FBF91CC61911434A00CC8A36 /* game.circles.js */,
+				FBF91CC71911434A00CC8A36 /* game.creatures.css */,
+				FBF91CC81911434A00CC8A36 /* game.creatures.js */,
+				FBF91CC91911434A00CC8A36 /* game.css */,
+				FBF91CCA1911434A00CC8A36 /* game.draw.css */,
+				FBF91CCB1911434A00CC8A36 /* game.draw.js */,
+				FBF91CCC1911434A00CC8A36 /* game.html */,
+				FBF91CCD1911434A00CC8A36 /* game.js */,
+				FBF91CCE1911434A00CC8A36 /* game.numbers.css */,
+				FBF91CCF1911434A00CC8A36 /* game.numbers.js */,
+				FBF91CD01911434A00CC8A36 /* game.symbols.css */,
+				FBF91CD11911434A00CC8A36 /* game.symbols.js */,
+				FBF91CD21911434A00CC8A36 /* game.vowels.css */,
+				FBF91CD31911434A00CC8A36 /* game.vowels.js */,
+				FBF91CD41911434A00CC8A36 /* game.words.css */,
+				FBF91CD51911434A00CC8A36 /* game.words.js */,
+				FBF91CD61911434A00CC8A36 /* game.words2.css */,
+				FBF91CD71911434A00CC8A36 /* game.words2.js */,
+				FBF91CD81911434A00CC8A36 /* img */,
+				FBF91CD91911434A00CC8A36 /* libs */,
+				FBF91CDA1911434A00CC8A36 /* man.html */,
+				FBF91CDB1911434A00CC8A36 /* positive.jpg */,
+				FBF91CDC1911434A00CC8A36 /* tester.html */,
+				FBF91CDD1911434A00CC8A36 /* timer.css */,
+				FBF91CDE1911434A00CC8A36 /* timer.js */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,9 +330,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB00BD9F187C9A7A009B3E9D /* InfoPlist.strings in Resources */,
+				FBF91CE01911434A00CC8A36 /* game.circles.css in Resources */,
+				FBF91CF31911434A00CC8A36 /* img in Resources */,
+				FBF91CF51911434A00CC8A36 /* man.html in Resources */,
+				FBF91CE41911434A00CC8A36 /* game.css in Resources */,
+				FBF91CE51911434A00CC8A36 /* game.draw.css in Resources */,
+				FBF91CF41911434A00CC8A36 /* libs in Resources */,
+				FBF91CE91911434A00CC8A36 /* game.numbers.css in Resources */,
+				FBF91CED1911434A00CC8A36 /* game.vowels.css in Resources */,
+				FBF91CF71911434A00CC8A36 /* tester.html in Resources */,
 				FB00BDA7187C9A7A009B3E9D /* Images.xcassets in Resources */,
 				FB00BDCA187C9B1A009B3E9D /* WebViewJavascriptBridge.js.txt in Resources */,
+				FBF91CF11911434A00CC8A36 /* game.words2.css in Resources */,
+				FBF91CE71911434A00CC8A36 /* game.html in Resources */,
+				FBF91CE21911434A00CC8A36 /* game.creatures.css in Resources */,
+				FBF91CEB1911434A00CC8A36 /* game.symbols.css in Resources */,
+				FBF91CF61911434A00CC8A36 /* positive.jpg in Resources */,
+				FBF91CEF1911434A00CC8A36 /* game.words.css in Resources */,
+				FBF91CF81911434A00CC8A36 /* timer.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,8 +367,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB00BDC5187C9ADA009B3E9D /* TOViewController.m in Sources */,
+				FBF91CF21911434A00CC8A36 /* game.words2.js in Sources */,
 				FB00BDCB187C9B1A009B3E9D /* WebViewJavascriptBridge.m in Sources */,
+				FBF91CE31911434A00CC8A36 /* game.creatures.js in Sources */,
+				FBF91CF91911434A00CC8A36 /* timer.js in Sources */,
+				FBF91CF01911434A00CC8A36 /* game.words.js in Sources */,
+				FBF91CE11911434A00CC8A36 /* game.circles.js in Sources */,
+				FBF91CE61911434A00CC8A36 /* game.draw.js in Sources */,
+				FBF91CEE1911434A00CC8A36 /* game.vowels.js in Sources */,
+				FBF91CEA1911434A00CC8A36 /* game.numbers.js in Sources */,
+				FB00BD9F187C9A7A009B3E9D /* InfoPlist.strings in Sources */,
+				FBF91CEC1911434A00CC8A36 /* game.symbols.js in Sources */,
+				FBF91CE81911434A00CC8A36 /* game.js in Sources */,
 				FB00BDA1187C9A7A009B3E9D /* main.m in Sources */,
+				FBF91CDF1911434A00CC8A36 /* canvas.js in Sources */,
 				FB00BDA5187C9A7A009B3E9D /* TOAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

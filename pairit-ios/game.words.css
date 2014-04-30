@@ -1,0 +1,31 @@
+#words { 
+    background: #41a7a8;
+  
+}
+#letters {
+    position: relative;
+    
+}
+#words .letter {
+    background-color: #32f9d3;
+    border: 6px solid #fff;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    margin: 15px;
+    
+ 
+}
+#words .dashed {
+    border-radius: 50%;
+    border: 2px dotted rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+}
+#words .dropped {
+    border: 2px solid transparent;
+    background: #0f0;
+}
+#words .ui-sortable-placeholder {  display: inline-block; height: 100px; height: 30px; }

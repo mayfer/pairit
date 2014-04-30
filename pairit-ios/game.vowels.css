@@ -1,0 +1,28 @@
+
+body {
+    background: #18504b;
+}
+#vowels .letter {
+    background-color: #23b598;
+    border: 6px solid #fff;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    margin: 15px;
+    
+ 
+}
+#vowels .dashed {
+    border-radius: 50%;
+    border: 2px dotted rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+}
+#vowels .dropped {
+    border: 2px solid transparent;
+    background: #0f0;
+}
+
+#vowels .ui-sortable-placeholder {  display: inline-block; height: 100px; height: 30px; }

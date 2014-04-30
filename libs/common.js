@@ -20,3 +20,32 @@ $(document).ready(function(){
         $('#main').css('opacity', '0.5');
     });
 });
+
+function connectWebViewJavascriptBridge(callback) {
+    if (window.WebViewJavascriptBridge) {
+        callback(WebViewJavascriptBridge)
+    } else {
+        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+            callback(WebViewJavascriptBridge)
+        }, false)
+    }
+}
+
+connectWebViewJavascriptBridge(function(bridge) {
+    window.js_bridge = bridge;
+
+    /* Init your app here */
+
+    bridge.init(function(message, responseCallback) {
+        console.log('Received message: ' + message)
+        if (responseCallback) {
+            //responseCallback("Right back atcha (js)")
+        }
+    })
+    //bridge.send('Hello from the javascript')
+    /*
+     bridge.send('Please respond to this', function responseCallback(responseData) {
+        console.log("esponse", responseData)
+    })
+     */
+})
