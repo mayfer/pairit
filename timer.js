@@ -2,7 +2,7 @@
 var Timer = function() {
     var timer = this;
     timer.time = 0;
-    timer.duration = 400;
+    timer.duration = 60;
 
     var timerdiv = $('<div>').attr('id', 'timer').appendTo($('body'));
     var inner = $('<div>').addClass('inner').appendTo(timerdiv);
