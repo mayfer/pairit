@@ -2,6 +2,9 @@
     background: #234187;
 }
 
+h3 {
+    font-weight: normal;
+}
 #symbols .letter { 
     border-radius: 6%;
     background-color: #3e76f9;
