@@ -1,11 +1,10 @@
 
-startGame = function(){
+startGame = function(num_players){
 
     this.current_game = 0;
     var game = this;
 
-    this.num_players = parseInt(window.location.hash.substring(1));
-    console.log(this.num_players);
+    this.num_players = num_players;
 
     this.game_types = [
         window.numbers_game,

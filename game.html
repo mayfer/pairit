@@ -42,11 +42,26 @@
 
             $(document).ready(function(){
 
-                window.games = startGame();
-                window.games.start();
+                var num_player = parseInt(window.location.hash.substring(1));
 
-                var timer = Timer();
-                timer.start();
+                var playgame = function(num_player) {
+                    window.games = startGame(num_player);
+                    window.games.start();
+
+                    var timer = Timer();
+                    timer.start();
+                };
+
+                if(num_player == 2) {
+                    $('#arrows').show();
+                    setTimeout(function() {
+                        $('#arrows').hide();
+                        playgame(num_player);
+                    }, 1000);
+                } else {
+                    $('#arrows').hide();
+                    playgame(num_player);
+                }
             });
 
         </script>
@@ -111,6 +126,12 @@
         </div>
 
         <a class='menu' href='man.html'>menu</a>
+
+        <div id='arrows'>
+            <!-- http://www.alanwood.net/unicode/arrows.html -->
+            <div>↥</div>
+            <div>↧</div>
+        </div>
 
         <div id='game-over'>
         
