@@ -10,7 +10,7 @@ window.symbols_game = function() {
     };
 
 
-    var vowels_str = "&"
+    var vowels_str = "♥"
     var vowels = vowels_str.split(" ");
 
     var consonants_str = "% ? @"
