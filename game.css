@@ -48,6 +48,7 @@ a, a:visited, a:hover {
 }
 
 
+
 h1 { 
   
     font-size:33px;
@@ -161,7 +162,7 @@ h1 {
 	background-repeat:repeat-y;
 }
 #correct.symbols {
-	background-color: #5180af;
+	background-color: #234187;
 }
 #correct.vowels {
 	background-color:#18504b;
@@ -189,4 +190,8 @@ h1 {
     top: 0;
     left: 0;
     font-size: 200px;
+}
+
+#arrows lil {
+	margin-top:200px;
 }
