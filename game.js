@@ -2,8 +2,10 @@
 startGame = function(){
 
     this.current_game = 0;
+    var game = this;
 
-    this.flipped = false;
+    this.num_players = parseInt(window.location.hash.substring(1));
+    console.log(this.num_players);
 
     this.game_types = [
         window.numbers_game,
@@ -33,7 +35,9 @@ startGame = function(){
             $('.game .wrapper').html('');
             this.game_types[this.current_game % this.game_types.length]();
 
-            window.js_bridge.send("flip");
+            if(game.num_players == 2) {
+                window.js_bridge.send("flip");
+            }
         }, 800);
     };
 

@@ -36,7 +36,9 @@ window.symbols_game = function() {
         var index = vowels.indexOf(letter); vowels.splice(index, 1);
     }
 
-    shuffle(letters);
+    while(letters.join('') == all_letters) {
+        letters = shuffle(letters);
+    }
 
     for(var i = 0; i < letters.length; i++) {
         var letter_elem = $('<div>')

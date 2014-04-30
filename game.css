@@ -11,6 +11,16 @@ html, body {
     height: 100%;
     width: 100%;
 }
+
+.menu {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+a, a:visited, a:hover {
+    color: #fff;
+    text-decoration: none;
+}
              
 #main {
     height: 100%;
