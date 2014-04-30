@@ -93,7 +93,7 @@ window.numbers_game = function() {
 
                 if($('.letter.dropped').length == $('#unordered-letters .letter').length) {
                     setTimeout(function() {
-                        window.games.next("Correct!", "words");
+                        window.games.next("Correct!", "numbers");
                     }, delay);
                 }
             },
