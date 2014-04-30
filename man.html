@@ -5,7 +5,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel='shortcut icon' href='#' />
         <link rel="stylesheet" href="libs/animate.css">
-        <link rel="stylesheet" href="libs/style.css">
         <meta charset="utf-8"> 
         <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1'>
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -22,10 +21,12 @@
     
 	        html, body {
           	
-          		background: #157377;
+          		background: #fff;
           		color: white; 
             	text-align: center;
             	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif
+                width: 100%;
+                height: 100%;
             	}
 
 	
@@ -35,21 +36,18 @@
                         }
             
             .lama{
-position: relative;	
-float: left;
-margin: 30px;
-padding: 40px;
-	top: 50%;
-	left:28%;
+                position: relative;	
+                float: left;
+                margin: 30px;
+                padding: 40px;
+                top: 50%;
+                left:28%;
 
-	border-radius: 30px;
-	width:520px;
-	height:280px;
-	padding: 30px;
-
-
-
-}
+                border-radius: 30px;
+                width:520px;
+                height:280px;
+                padding: 30px;
+            }
 
 
 .image {
@@ -143,6 +141,46 @@ position: relative;
            color: #000;
 	      
 	          } 
+
+        .play-container {
+            position: relative;
+            margin: 0 auto;
+            width: 460px;
+            height: 200px;
+        }
+        .play {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+        }
+        .one-player {
+            background: #a00;
+        }
+        .two-player {
+            background: #0a0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .play-container a {
+            display: block;
+        }
+
+        .num {
+            display: block;
+            font-size: 25px;
+            padding: 3px;
+        }
+        .p {
+            display: block;
+            font-size: 18px;
+            padding: 3px;
+        }
+
+
         </style>
         <script type="text/javascript">
 
@@ -153,22 +191,26 @@ position: relative;
     <body>
         <div id='main'><h3>parrot</h3>
 
-           <a href="game.html">
-                 
- <div class="lama image">
- <img src="img/1player.png">
-
-           </div> 
-           
-            <div class="lama image"><img src="img/2player.png">
-           <br> </div>         
-
-           </div> 
-            
-           </a> 
-         
-                <div id='letters'></div>
-                        </body>
+            <div class='play-container'>
+                <a href="game.html#1" class='one-player play'>
+                    <span class='num'>
+                        1
+                    </span>
+                    <span class='p'>
+                        Player
+                    </span>
+                </a>
+                <a href="game.html#2" class='two-player play'>
+                    <span class='num'>
+                        2
+                    </span>
+                    <span class='p'>
+                        Player
+                    </span>
+                </a>
+            </div>
+            <!-- img/1player.png img/2player.png -->
+        </div>
 </html>
 
 

@@ -32,6 +32,8 @@ startGame = function(){
             $('.game').hide();
             $('.game .wrapper').html('');
             this.game_types[this.current_game % this.game_types.length]();
+
+            window.js_bridge.send("flip");
         }, 800);
     };
 
@@ -43,3 +45,31 @@ startGame = function(){
 
     return this;
 }
+
+
+function connectWebViewJavascriptBridge(callback) {
+    if (window.WebViewJavascriptBridge) {
+        callback(WebViewJavascriptBridge)
+    } else {
+        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+            callback(WebViewJavascriptBridge)
+        }, false)
+    }
+}
+
+connectWebViewJavascriptBridge(function(bridge) {
+    window.js_bridge = bridge;
+
+    /* Init your app here */
+
+    bridge.init(function(message, responseCallback) {
+        alert('Received message: ' + message)   
+        if (responseCallback) {
+            responseCallback("Right back atcha (js)")
+        }
+    })
+    bridge.send('Hello from the javascript')
+    bridge.send('Please respond to this', function responseCallback(responseData) {
+        console.log("Javascript got its response", responseData)
+    })
+})
